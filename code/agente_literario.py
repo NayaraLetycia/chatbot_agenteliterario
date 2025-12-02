@@ -30,7 +30,7 @@ class AgenteLiterario:
         params = {
             "q": query,
             "maxResults": max_results,
-            "langRestrict": "pt",  # Priorizar livros em português
+            "langRestrict": "pt",  
             "orderBy": "relevance"
         }
         
@@ -56,13 +56,13 @@ class AgenteLiterario:
     
     def conversar(self, mensagem_usuario):
         """Mantém conversa com o usuário usando LLM"""
-        # Adiciona mensagem do usuário ao histórico
+        
         self.historico_conversa.append({
             "role": "user",
             "content": mensagem_usuario
         })
         
-        # System prompt para guiar o agente
+       
         system_prompt = """Você é um agente literário especialista em recomendar livros.
         
 Seu objetivo é:
@@ -77,7 +77,7 @@ Quando tiver informações suficientes, sugira livros reais e populares.
 Use este formato quando for recomendar:
 RECOMENDAÇÃO: [nome do livro] por [autor]"""
 
-        # Monta mensagens para o LLM
+        
         mensagens = [
             {"role": "system", "content": system_prompt}
         ] + self.historico_conversa
@@ -141,12 +141,12 @@ def main():
     
     agente = AgenteLiterario()
     
-    # Inicia a conversa
+    
     resposta_inicial = agente.conversar("Olá! Quero recomendações de livros.")
     print(f"\n🤖 Agente: {resposta_inicial}\n")
     
     while True:
-        # Recebe input do usuário
+        
         entrada = input("👤 Você: ").strip()
         
         if not entrada:
@@ -156,7 +156,7 @@ def main():
             print("\n👋 Até logo! Boas leituras!\n")
             break
         
-        # Comando especial: buscar no Google Books
+       
         if entrada.lower().startswith('buscar:'):
             termo = entrada.split(':', 1)[1].strip()
             print(f"\n🔍 Buscando '{termo}' no Google Books...\n")
@@ -172,23 +172,23 @@ def main():
                 print("Nenhum livro encontrado.\n")
             continue
         
-        # Comando especial: gerar plano
+        
         if entrada.lower() == 'plano':
             print("\n📋 Gerando seu plano de leitura personalizado...\n")
             plano = agente.gerar_plano_leitura()
             print(f"🤖 Agente:\n{plano}\n")
             continue
         
-        # Conversa normal
+        
         resposta = agente.conversar(entrada)
         print(f"\n🤖 Agente: {resposta}\n")
         
-        # Se houver recomendação, busca automaticamente no Google Books
+        
         if 'RECOMENDAÇÃO:' in resposta or 'recomendo' in resposta.lower():
             recomendacoes = agente.extrair_recomendacoes(resposta)
             if recomendacoes:
                 print("📖 Buscando links de compra...\n")
-                # Pega primeira recomendação e busca
+               
                 primeiro_livro = recomendacoes[0].split('RECOMENDAÇÃO:')[-1].strip()
                 livros = agente.buscar_livros_google(primeiro_livro, max_results=3)
                 
@@ -201,3 +201,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
