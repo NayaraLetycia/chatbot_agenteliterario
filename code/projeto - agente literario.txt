@@ -1,0 +1,78 @@
+TEMA 1 - Sistema de recomendação personalizado para compra de livros.
+Os alunos deverão desenvolver um assistente inteligente integrado com LLMs que seja
+capaz de manter um diálogo com o usuário para entender seus gostos, aptidões e
+interesses para efetuar recomendações personalizadas e elaborar planos de leitura.
+(peso 9)
+O diferencial é conseguir estruturar chamadas de API para compra de livros à partir do
+processamento de linguagem natural.
+(peso 1)
+Agenda
+19/novembro (Quarta-feira): Instigar a análise de negócio com visão estratégica, conectar
+esfera de negócio e estratégica com esferas de planejamento e desenvolvimento de
+software com foco na construção de agentes virtuais.
+03/dezembro (Quarta-feira): Apresentação do projeto desafio, revisão final e encerramento
+do curso.
+No dia da apresentação, no início da aula os artigos devem estar entregues.
+Documento com explicações detalhadas sobre como o artigo deve ser elaborado.
+Apresentação
+As apresentações vão ocorrer na primeira parte da aula 07.
+Todos os membros do grupo devem apresentar uma parte do trabalho.
+A apresentação deve ter uma duração mínima de 15 min e no máximo 25 minutos.
+Durante a apresentação é esperado:
+- Explicação à respeito da abordagem escolhida para implementação do projeto.
+- Demonstração e explicação do código fonte.
+- Demonstração do funcionamento da solução apresentada.
+Imediatamente após a apresentação será aberto um intervalo de 5 até 10 minutos para
+sabatina.
+Exercícios
+Exercício 1: Análise de Sentimentos
+Objetivo:
+Utilizar a API de LLM para analisar e classificar os sentimentos expressos em uma frase ou
+texto, retornando a polaridade (positivo, neutro, negativo) e o score.
+Tarefa:
+1) Utilizar a API de LLM para processar um texto e classificar o sentimento nele expresso.
+2) Desenvolver um script Python que leia uma frase ou texto e retorne à classificação do
+sentimento e o score correspondente.
+Exercício 2: Identificação de Entidades
+Objetivo:
+Utilizar a API de LLM para identificar e classificar entidades nomeadas em um texto (por
+exemplo, pessoas, organizações, lugares).
+Tarefa:
+1)Utilizar a API de LLM para identificar entidades mencionadas no texto.
+2)Desenvolver um script Python que leia um texto e retorne as entidades encontradas e
+suas classificações.
+Exercício 3: Geração de Texto
+Objetivo:
+Utilizar a API de LLM para gerar texto a partir de um prompt fornecido.
+Tarefa:
+1)Utilizar a API de LLM para gerar um texto com base em um prompt inicial.
+2)Desenvolver um script Python que leia um prompt e retorne o texto gerado pelo modelo.
+Exercício 4: Resolução de Problemas
+Objetivo:
+Utilizar a API de LLM para resolver um problema a partir de uma pergunta ou questão
+fornecida.
+Tarefa:
+1)Utilizar a API de LLM para responder a uma pergunta ou resolver um problema específico.
+2)Desenvolver um script Python que leia uma pergunta e retorne a resposta ou solução.
+Exercício 5: Conversa com um Agente Virtual
+Objetivo: Utilizar a API de LLM para criar uma conversa com um agente virtual, baseado
+nas entradas fornecidas pelo usuário.
+Tarefa:
+1) Utilizar a API de LLM para interagir com o usuário em uma conversa.
+2)Desenvolver um script Python que leia entradas do usuário e retorne respostas do agente
+virtual.
+Funções
+Desenvolvimento do código do trabalho: Lucca e Nayara
+Desenvolvimento do documento do trabalho: Cleiton
+Solucionar os exercícios: Henrique e Geovani
+Desenvolvimento da Apresentação: Adriana
+================ Minhas anotações do que eu entendi com professor =============
+O trabalho tem que resolver um problema real do dia a dia usando tecnologia e
+conversando com professor, e pelo que percebi seria muito legal se usarmos o Flowiseai
+que ele tanto apresentou em aula, acho que assim a gente puxa um pouco o saco e ganha
+uns pontinhos a mais...
+Lucca: Podemos tentar fazer pelo N8N que já configuramos em sala e fazer um agente
+integrado com gmail também para entregar as recomendações como uma newsletter.
+O agente pode ser independente, mas ele pode também entregar algo usando o Gmail via
+N8N. Dá pra usar integração via Discord também, o que pode resolver alguns problemas
+interessantes
