@@ -87,7 +87,7 @@ RECOMENDAÇÃO: [nome do livro] por [autor]"""
                 messages=mensagens,
                 model="llama-3.3-70b-versatile", 
                 temperature=0.7,
-                max_tokens=500
+                max_tokens=1000
             )
             
             resposta = chat_completion.choices[0].message.content
@@ -201,4 +201,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
